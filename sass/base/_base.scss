@@ -1,0 +1,154 @@
+/***********************************
+            BASIC RESET
+***********************************/
+@import url("https://fonts.googleapis.com/css2?family=Handlee&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100&display=swap");
+:root {
+  --swiper-theme-color: #284734;
+  --swiper-navigation-color: #284734;
+  --swiper-pagination-color: #284734;
+  --primary-color: #284734;
+  --font-family: "Poppins", sans-serif;
+}
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+html {
+  /* 
+    Converting default browser font-size of 16px to 10px in percentage
+    10px / 16px * 100 = 62.5%, thus 1rem = 62.5% = 10px
+    */
+  font-size: 62.5%;
+
+  @include respond-up(lg) {
+    font-size: 75%; // 1rem = 12px, 12/16*100 = 75%
+  }
+  @include respond-down(md) {
+    font-size: 56.25%; // 1rem = 9px, 8/16*100 = 56.25%
+  }
+  @include respond-down(sm) {
+    font-size: 50%; // 1rem = 8px, 8/16 * 100 = 50%;
+  }
+  overflow-y: initial;
+}
+body {
+  text-rendering: optimizeLegibility;
+  box-sizing: border-box;
+  font-family: $font-family;
+  font-weight: $line-weight-base;
+  font-size: 1.2rem;
+  line-height: $line-height-base;
+  color: $text;
+  background: $bg;
+  min-height: 100vh;
+  @include scrollbar;
+  // @include respond-down(xs) {
+  //   font-size: 1.6rem;
+  // }
+}
+.p-component,
+.p-inputtext {
+  font-family: $font-family;
+  font-size: 1rem;
+  font-weight: $line-weight-base;
+}
+// .p-component.p-button-primary {
+//   background: $main;
+//   border: 1px solid $main;
+// }
+.p-tabview-selected {
+  // background-color: $main;
+}
+.p-highlight {
+  // background-color: $main !important;
+}
+.p-tabview .p-tabview-nav .p-tabview-ink-bar {
+  background-color: $secondary;
+}
+.p-dropdown,
+.p-inputtext {
+  width: 100%;
+}
+.p-paginator .p-paginator-pages .p-paginator-page.p-highlight {
+  color: $main;
+}
+.p-link:focus {
+  outline: 0 none;
+  outline-offset: 0;
+  box-shadow: 0 0 0 0.2rem #2847347a;
+}
+a,
+a:active {
+  color: $text;
+  text-decoration: none;
+}
+::selection {
+  background-color: $main;
+  color: #fff !important;
+}
+ol,
+ul,
+dl {
+  margin: 0 !important;
+}
+
+.p-dropdown,
+.p-inputtext {
+  width: 100%;
+}
+.p-avatar.p-avatar-lg {
+  width: 2.5rem;
+  height: 2.5rem;
+  font-size: 1.5rem;
+}
+
+.datatable-filter-demo .p-paginator .p-paginator-current {
+  margin-left: auto;
+}
+.datatable-filter-demo .p-progressbar {
+  height: 0.5rem;
+  background-color: #d8dadc;
+}
+.datatable-filter-demo .p-progressbar .p-progressbar-value {
+  background-color: #607d8b;
+}
+.datatable-filter-demo .p-datepicker {
+  min-width: 25rem;
+}
+.datatable-filter-demo .p-datepicker td {
+  font-weight: 400;
+}
+.datatable-filter-demo .p-datatable.p-datatable-customers .p-datatable-header {
+  text-align: left;
+}
+.datatable-filter-demo .p-datatable.p-datatable-customers .p-paginator {
+  padding: 1rem;
+}
+.datatable-filter-demo
+  .p-datatable.p-datatable-customers
+  .p-datatable-thead
+  > tr
+  > th {
+  text-align: left;
+}
+.datatable-filter-demo
+  .p-datatable.p-datatable-customers
+  .p-datatable-tbody
+  > tr
+  > td {
+  cursor: auto;
+}
+.datatable-filter-demo
+  .p-datatable.p-datatable-customers
+  .p-dropdown-label:not(.p-placeholder) {
+  text-transform: uppercase;
+}
+
+.p-image-mask.p-component-overlay.p-component-overlay-enter {
+  z-index: 99999 !important;
+}
